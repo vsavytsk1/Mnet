@@ -1,6 +1,20 @@
-MIT License
+# MachineNet ? License
+Copyright 2026 Vladyslav Savytskyy (@Sagaific, Buenos Aires)
 
-Copyright (c) 2026 Vladyslav Savytskyy
+---
+
+## The code
+
+Everything in this repository ? the geometry kernel, the renderer, the audio
+system, the VR controls, the documentation, the opening sequence, and the
+autopilot that plays itself ? is released under the **MIT License**.
+
+Free to use, modify, distribute, sell, and strap to someone's face inside a
+VR headset. No restrictions except the one below.
+
+---
+
+## The MIT License (full text)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +33,39 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## The math
+
+The mathematical results in this repository ? Euler's theorem on convex
+polyhedra, the Goldberg-Coxeter construction, the C60 closure invariants,
+the {2,3,5} Coxeter constraint, the graph-discrete Navier-Stokes formulation
+? are not owned by anyone.
+
+They were proved by humans who are mostly dead and belong to all of us.
+
+This repository is a computational implementation of those results, rendered
+inside a plastic headset. The implementation is mine. The math is humanity's.
+
+---
+
+## The honest statement
+
+Someone will probably take this, remove the license header, add a subscription
+paywall, and sell it as a "premium VR mathematics experience" for $49.99/month.
+
+We know. We tried anyway.
+
+The target price is $10 on Steam. Ten dollars. For a shape that Euler proved
+must exist, rendered in VR, with procedural audio and a steampunk opening
+sequence. Ten dollars and the math is in your chest.
+
+The math is open. The shape closes or it doesn't.
+Either way, it's real.
+
+---
+
+*Vladyslav Savytskyy ? Buenos Aires ? 2026*
+*"There is no shame in not understanding reality yet.*
+*The shame is only in stopping the search."*

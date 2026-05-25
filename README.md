@@ -104,8 +104,14 @@ Reproducible. Logged. 69 runs across 6 versions.
 
 MIT. The math is open. The geometry is open. The shape closes when it closes.
 
+See the full [LICENSE](./LICENSE) for the honest statement.
+Read the [DISCLAIMER](./DISCLAIMER.md) before putting on the headset.
+Want to help? [CONTRIBUTING](./CONTRIBUTING.md) ? no gatekeeping, no CLA.
+
 ---
 
 *@Sagaific ? Buenos Aires ? 2026*
 
 *Steam target: $10. Quest 3 native. The cave is in your chest.*
+
+*[Don't Panic.](./DISCLAIMER.md)*
