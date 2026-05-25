@@ -1,5 +1,0 @@
-﻿<Solution>
-  <Project Path="MachineNet.Kernel.Tests.csproj" />
-  <Project Path="MachineNet.Kernel.csproj" />
-  <Project Path="MachineNet.Kernel.Editor.csproj" />
-</Solution>

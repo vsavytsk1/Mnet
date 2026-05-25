@@ -15,7 +15,7 @@ namespace MachineNet
     {
         [Header("Auto Screenshot")]
         public float intervalSeconds = 5f;
-        public bool  active          = true;
+        public bool  active          = false; // default OFF to avoid filling storage
         public int   maxShots        = 50; // dont fill storage
 
         string _dir;

@@ -48,9 +48,12 @@ namespace MachineNet
 
         MeshRenderer _gridRenderer;
         Camera       _cam;
+        bool         _hasRun = false; // FIX #9: guard against re-init from SetActive
 
         void Start()
         {
+            if (_hasRun) return; // FIX #9: don't re-init if SetActive(true) called again
+            _hasRun = true;
             _cam = Camera.main;
 
             // FRAME 0: pure black

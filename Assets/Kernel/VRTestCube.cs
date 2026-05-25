@@ -48,8 +48,8 @@ namespace MachineNet
             SpawnObj(PrimitiveType.Sphere, parent, new Vector3(1f, 0f, 1.5f), 0.4f, Color.red, sh);
             // Below
             SpawnObj(PrimitiveType.Cube, parent, new Vector3(0f, -0.5f, 1f), 0.3f, Color.yellow, sh);
-            // GIANT sphere surrounding player
-            SpawnObj(PrimitiveType.Sphere, null, new Vector3(0f, 1.5f, 0f), 10f, new Color(0f, 0.3f, 0.5f, 0.5f), sh);
+            // FIX #8: was 10-unit sphere obscuring everything. Now 0.2m marker at floor.
+            SpawnObj(PrimitiveType.Sphere, null, new Vector3(0f, 0f, 0f), 0.2f, new Color(0f, 0.3f, 0.5f, 1f), sh);
 
             _debugInfo += "\nSpawned 5 objects";
 

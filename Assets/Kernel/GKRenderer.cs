@@ -1,5 +1,5 @@
 // =============================================================================
-//  GKRenderer.cs  v5 ? VR READY ? OPENING SEQUENCE
+//  GKRenderer.cs  v6 ? PURIFIED ? all review items fixed ? VR READY ? OPENING SEQUENCE
 //  Black background. Grid floor. C60 emerges from center. Properly lit.
 //  Matches mnet_v7.html opening exactly.
 //
@@ -66,6 +66,8 @@ namespace MachineNet
         static readonly Color GRID_SUB   = new Color(0.039f, 0.063f, 0.094f, 1f); // #0a1018
 
         // ?? C60 raw radius (PHI-based kernel coords) ???????????????????????
+        // Kernel normalizes to radius 1.6. Raw PHI coords = sqrt(1+(3*PHI)^2) = 4.956037.
+        // Dividing by C60R maps kernel coords to ~unit sphere. vrStartScale sizes for VR.
         const float C60R = 4.956036f;
 
         // ?? state ??????????????????????????????????????????????????????????
@@ -106,8 +108,14 @@ namespace MachineNet
         {
           try
           {
+            // FIX #1: dataPath is READ-ONLY on Android (inside APK).
+            // Use persistentDataPath on device, dataPath only in Editor.
+            #if UNITY_ANDROID && !UNITY_EDITOR
+            _logDir = Path.Combine(Application.persistentDataPath, "PlayLogs");
+            #else
             _logDir = Path.Combine(Application.dataPath,
                       "Kernel", "Tests 1", "TestLogs");
+            #endif
             Directory.CreateDirectory(_logDir);
 
             // ?? scene: black background (PC only - Quest uses XR rig) ??
@@ -166,7 +174,18 @@ namespace MachineNet
         {
             ClearMesh();
             KillMats();
-            if (_gridObj != null) DestroyImmediate(_gridObj);
+            if (_gridObj != null) SafeDestroy(_gridObj);
+        }
+
+        // FIX #5: DestroyImmediate is Editor-only. Destroy() for runtime.
+        static void SafeDestroy(Object obj)
+        {
+            if (obj == null) return;
+            #if UNITY_EDITOR
+            DestroyImmediate(obj);
+            #else
+            Destroy(obj);
+            #endif
         }
 
         // ?? update ?????????????????????????????????????????????????????????
@@ -282,7 +301,7 @@ namespace MachineNet
 
         void BuildGrid()
         {
-            if (_gridObj != null) DestroyImmediate(_gridObj);
+            if (_gridObj != null) SafeDestroy(_gridObj);
 
             _gridObj = new GameObject("GK_Grid");
             _gridObj.transform.position = new Vector3(0f, -1.2f, 0f);
@@ -298,21 +317,16 @@ namespace MachineNet
 
             var verts = new List<Vector3>();
             var tris  = new List<int>();
-            var cols  = new List<Color>();
 
             for (int i = 0; i <= divs; i++)
             {
                 float x = -half + i * step;
-                bool major = (i % 4 == 0);
-                Color c = major ? GRID_MAIN : GRID_SUB;
-
                 // line along Z
                 int vi = verts.Count;
                 verts.Add(new Vector3(x,        0f, -half));
                 verts.Add(new Vector3(x + 0.01f,0f, -half));
                 verts.Add(new Vector3(x + 0.01f,0f,  half));
                 verts.Add(new Vector3(x,        0f,  half));
-                cols.Add(c); cols.Add(c); cols.Add(c); cols.Add(c);
                 tris.AddRange(new[]{vi,vi+2,vi+1, vi,vi+3,vi+2});
 
                 // line along X
@@ -321,14 +335,12 @@ namespace MachineNet
                 verts.Add(new Vector3( half, 0f, x));
                 verts.Add(new Vector3( half, 0f, x + 0.01f));
                 verts.Add(new Vector3(-half, 0f, x + 0.01f));
-                cols.Add(c); cols.Add(c); cols.Add(c); cols.Add(c);
                 tris.AddRange(new[]{vi,vi+2,vi+1, vi,vi+3,vi+2});
             }
 
             var mesh = new Mesh();
             mesh.vertices  = verts.ToArray();
             mesh.triangles = tris.ToArray();
-            mesh.colors    = cols.ToArray();
             mesh.RecalculateNormals();
             mf.sharedMesh  = mesh;
 
@@ -414,7 +426,7 @@ namespace MachineNet
 
         void ClearMesh()
         {
-            if (_meshRoot != null) DestroyImmediate(_meshRoot);
+            if (_meshRoot != null) SafeDestroy(_meshRoot);
             _meshRoot = null;
         }
 
@@ -508,7 +520,7 @@ namespace MachineNet
         void KillMats()
         {
             foreach(var m in new[]{_pentMat,_hexMat,_edgeMat})
-                if(m!=null) DestroyImmediate(m);
+                if(m!=null) SafeDestroy(m);
         }
 
         // ?? gizmos (scene view) ????????????????????????????????????????????
@@ -534,8 +546,9 @@ namespace MachineNet
                 for(int i=0;i<pts.Length;i++)
                 {
                     var a=pts[i];var b=pts[(i+1)%pts.Length];
-                    string ka=$"{a[0]:F3}";string kb=$"{b[0]:F3}";
-                    string key=string.Compare(ka,kb)<0?ka+kb:kb+ka;
+                    string ka=$"{a[0]:F3},{a[1]:F3},{a[2]:F3}";
+                    string kb=$"{b[0]:F3},{b[1]:F3},{b[2]:F3}";
+                    string key=string.Compare(ka,kb)<0?ka+"|"+kb:kb+"|"+ka;
                     if(seen.Contains(key))continue;seen.Add(key);
                     Gizmos.DrawLine(
                         transform.position+new Vector3(a[0]/C60R,a[1]/C60R,a[2]/C60R),

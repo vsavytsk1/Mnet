@@ -267,6 +267,13 @@ namespace MachineNet
             mat.color = baseCol;
         }
 
+        // FIX #10: warn if references not wired in Inspector
+        void Start()
+        {
+            if (gkRenderer == null) Debug.LogWarning("[GKAuto] gkRenderer is NULL ? wire it in Inspector!");
+            if (gkAudio == null)    Debug.LogWarning("[GKAuto] gkAudio is NULL ? wire it in Inspector!");
+        }
+
         // ?? keyboard shortcuts (editor) ????????????????????????????????
         void Update()
         {
