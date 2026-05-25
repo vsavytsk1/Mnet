@@ -344,7 +344,13 @@ namespace MachineNet
             mesh.RecalculateNormals();
             mf.sharedMesh  = mesh;
 
-            var gridMat = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
+            var gridShader = Shader.Find("Universal Render Pipeline/Unlit");
+            if (gridShader == null) gridShader = Shader.Find("Unlit/Color");
+            if (gridShader == null) gridShader = Shader.Find("Sprites/Default");
+            if (gridShader == null) gridShader = Shader.Find("UI/Default");
+            if (gridShader == null) gridShader = Shader.Find("Hidden/InternalColored");
+            if (gridShader == null) { Debug.LogError("[GK] No shader found for grid!"); return; }
+            var gridMat = new Material(gridShader);
             gridMat.color = GRID_MAIN;
             mr.sharedMaterial = gridMat;
         }
@@ -517,6 +523,7 @@ namespace MachineNet
 
         Material MakeUnlit(Shader s, Color c)
         {
+            if (s == null) { Debug.LogError("[GK] MakeUnlit: shader is null!"); return null; }
             var m = new Material(s);
             m.color = c;
             return m;
