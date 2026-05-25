@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="18" result="Passed" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.1442077">
+  <test-suite type="TestSuite" id="1031" name="Mnet" fullname="Mnet" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.144208" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1021" name="MachineNet.Kernel.Tests.dll" fullname="C:/MnetUni/Mnet/Library/ScriptAssemblies/MachineNet.Kernel.Tests.dll" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.134374" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="42844" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1022" name="MachineNet" fullname="MachineNet" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.133788" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1023" name="Tests" fullname="MachineNet.Tests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.133471" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1002" name="GKTests" fullname="MachineNet.Tests.GKTests" classname="MachineNet.Tests.GKTests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:03Z" duration="0.132199" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="BuildC60_AllFacesAtLevelZero" fullname="MachineNet.Tests.GKTests.BuildC60_AllFacesAtLevelZero" methodname="BuildC60_AllFacesAtLevelZero" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="506309803" result="Passed" start-time="2026-05-24 17:19:02Z" end-time="2026-05-24 17:19:02Z" duration="0.022526" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="BuildC60_EulerCharacteristicIsTwo" fullname="MachineNet.Tests.GKTests.BuildC60_EulerCharacteristicIsTwo" methodname="BuildC60_EulerCharacteristicIsTwo" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="460458433" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001904" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="BuildC60_ExactlyTwelvePentagons" fullname="MachineNet.Tests.GKTests.BuildC60_ExactlyTwelvePentagons" methodname="BuildC60_ExactlyTwelvePentagons" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="205835926" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001851" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="BuildC60_ExactlyTwentyHexagons" fullname="MachineNet.Tests.GKTests.BuildC60_ExactlyTwentyHexagons" methodname="BuildC60_ExactlyTwentyHexagons" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1718641669" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001991" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="BuildC60_NinetyEdges" fullname="MachineNet.Tests.GKTests.BuildC60_NinetyEdges" methodname="BuildC60_NinetyEdges" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="722352915" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001930" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="BuildC60_SixtyVertices" fullname="MachineNet.Tests.GKTests.BuildC60_SixtyVertices" methodname="BuildC60_SixtyVertices" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1315192747" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001999" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="BuildC60_ThirtyTwoFaces" fullname="MachineNet.Tests.GKTests.BuildC60_ThirtyTwoFaces" methodname="BuildC60_ThirtyTwoFaces" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1676264764" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001933" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="BuildC60_TwelveAnchorsDefined" fullname="MachineNet.Tests.GKTests.BuildC60_TwelveAnchorsDefined" methodname="BuildC60_TwelveAnchorsDefined" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="612685448" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.001969" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="FaceLocalFrame_NormalIsUnitVector" fullname="MachineNet.Tests.GKTests.FaceLocalFrame_NormalIsUnitVector" methodname="FaceLocalFrame_NormalIsUnitVector" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1281376936" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.002034" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="FaceLocalFrame_TangentOrthogonalToNormal" fullname="MachineNet.Tests.GKTests.FaceLocalFrame_TangentOrthogonalToNormal" methodname="FaceLocalFrame_TangentOrthogonalToNormal" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="639883633" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.000915" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="RefineAll_LevelIncreases" fullname="MachineNet.Tests.GKTests.RefineAll_LevelIncreases" methodname="RefineAll_LevelIncreases" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="875097562" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.009465" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="RefineAll_PentagonCountStaysTwelve" fullname="MachineNet.Tests.GKTests.RefineAll_PentagonCountStaysTwelve" methodname="RefineAll_PentagonCountStaysTwelve" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="135240578" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.008273" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="RefineAll_TwicePentagonCountStillTwelve" fullname="MachineNet.Tests.GKTests.RefineAll_TwicePentagonCountStillTwelve" methodname="RefineAll_TwicePentagonCountStillTwelve" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1800135868" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.053220" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="RefineOne_PentagonCountPreserved" fullname="MachineNet.Tests.GKTests.RefineOne_PentagonCountPreserved" methodname="RefineOne_PentagonCountPreserved" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="738530775" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.002381" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="VCross_Perpendicular" fullname="MachineNet.Tests.GKTests.VCross_Perpendicular" methodname="VCross_Perpendicular" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="2094861151" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.000235" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="VLerp_AtOneReturnsB" fullname="MachineNet.Tests.GKTests.VLerp_AtOneReturnsB" methodname="VLerp_AtOneReturnsB" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1408297239" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.000154" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="VLerp_AtZeroReturnsA" fullname="MachineNet.Tests.GKTests.VLerp_AtZeroReturnsA" methodname="VLerp_AtZeroReturnsA" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="627895932" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.000154" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="VNorm_ReturnsUnitVector" fullname="MachineNet.Tests.GKTests.VNorm_ReturnsUnitVector" methodname="VNorm_ReturnsUnitVector" classname="MachineNet.Tests.GKTests" runstate="Runnable" seed="1596613557" result="Passed" start-time="2026-05-24 17:19:03Z" end-time="2026-05-24 17:19:03Z" duration="0.000141" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/vladi/AppData/LocalLow/DefaultCompany/Mnet\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

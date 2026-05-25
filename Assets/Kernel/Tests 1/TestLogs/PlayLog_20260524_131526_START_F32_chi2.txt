@@ -1,0 +1,14 @@
+=== MachineNet GKRenderer Play Log ===
+Tag       : START
+Time      : 5/24/2026 1:15:26 PM
+Faces     : 32
+Vertices  : 60
+Edges     : 90
+Pentagons : 12  (always 12 by Euler)
+Hexagons  : 20
+MaxLevel  : 0
+Chi       : 2  (must be 2)
+Anchors   : 12
+INVARIANTS:
+  pents==12 : True
+  chi==2    : True
