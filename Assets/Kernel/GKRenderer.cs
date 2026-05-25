@@ -502,8 +502,13 @@ namespace MachineNet
 
         void BuildMaterials()
         {
+            // Quest strips unused shaders aggressively. Try multiple fallbacks.
             var unlitShader = Shader.Find("Universal Render Pipeline/Unlit");
             if (unlitShader == null) unlitShader = Shader.Find("Unlit/Color");
+            if (unlitShader == null) unlitShader = Shader.Find("Sprites/Default");   // never stripped
+            if (unlitShader == null) unlitShader = Shader.Find("UI/Default");         // never stripped
+            if (unlitShader == null) unlitShader = Shader.Find("Hidden/InternalColored");
+            Debug.Log($"[GK] Shader resolved: {(unlitShader != null ? unlitShader.name : "NULL")}");
 
             _pentMat  = MakeUnlit(unlitShader, PENT_COLOR);
             _hexMat   = MakeUnlit(unlitShader, HEX_COLOR);

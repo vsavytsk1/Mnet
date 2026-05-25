@@ -36,7 +36,9 @@ namespace MachineNet
             var sh = Shader.Find("Universal Render Pipeline/Unlit");
             string shName = sh != null ? "URP/Unlit" : "null";
             if (sh == null) { sh = Shader.Find("Unlit/Color"); shName = sh != null ? "Unlit/Color" : "null"; }
-            if (sh == null) { sh = Shader.Find("Standard"); shName = sh != null ? "Standard" : "null"; }
+            if (sh == null) { sh = Shader.Find("Sprites/Default"); shName = sh != null ? "Sprites/Default" : "null"; }
+            if (sh == null) { sh = Shader.Find("UI/Default"); shName = sh != null ? "UI/Default" : "null"; }
+            if (sh == null) { sh = Shader.Find("Hidden/InternalColored"); shName = sh != null ? "InternalColored" : "null"; }
 
             _debugInfo += "\nShader: " + shName;
 
