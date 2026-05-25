@@ -7,6 +7,17 @@
 
 ---
 
+## VR Demo ? May 25, 2026
+
+> *No cut. No edits. No filter. Raw Quest 3 recording from the cave.*
+
+https://github.com/vsavytsk1/Mnet/raw/main/Mnet_Demo_v5.1.mp4
+
+36 FPS. Hand tracking. Haptic feedback on contact. Buenos Aires, 2 AM.
+The pipeline is proven. The C60 is next.
+
+---
+
 ## What this is
 
 Graph-discrete Navier-Stokes running on a C60 fullerene topology, rendered in VR on Meta Quest 3. The math kernel is certified (18/18 topology invariant tests, 30+ consecutive runs). The geometry is procedural ? zero asset files, zero textures, pure math.
