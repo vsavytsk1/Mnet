@@ -81,3 +81,103 @@ YouTube/TikTok. Zero talking. Zero tutorials.
 4K lofi solver porn. C60 converging. Wings flowing.
 M?bius breaking. Residuals painting color fields.
 10sec shorts to 10min zen loops.
+
+## #28: FANCY BITCOIN SHENANIGANS -- Cryptographic Topology Ledger
+*Unity implementation. Buenos Aires -- May 28 2026.*
+
+### The Problem It Solves
+Unity state bugs. Memory leaks. "What refinement level was I at?"
+NS flow history lost on crash. No rewind. No verification.
+Geometry state is mutable. Mutable = untrusted.
+
+### The Idea
+Every GKState (mesh + flow + NS step) gets a hash.
+Like a Merkle tree. Like a blockchain.
+Except instead of transactions -- it is topology.
+
+    // GKLedger.cs
+    public struct GKBlock {
+        public string   hash;        // SHA256 of this state
+        public string   parentHash;  // previous block
+        public int      step;        // NS timestep
+        public int      faces;       // F
+        public int      pentagons;   // always 12
+        public int      chi;         // always 2
+        public float    enstrophy;
+        public float    dissipation;
+        public float    tke;
+        public float[]  omega;       // full vorticity field
+        public DateTime timestamp;   // Buenos Aires time
+    }
+    // Every refinement     = new block
+    // Every N NS steps     = new block
+    // Every undo           = revert to parent block
+    // Chain is IMMUTABLE   -- no state bugs possible
+    // chi=2 every block    -- topology invariant enforced
+
+### What This Gives You
+
+    REWIND:   seek to block 47 -- mesh + omega restored exactly
+              like git checkout for physics
+              no recompute -- it is in the chain
+
+    SCRUB:    cached blocks -- skip computation
+              already ran 500,000 steps? instant timeline
+              drag through turbulence history in VR
+
+    VERIFY:   hash(block_n) == block_{n+1}.parentHash
+              chi==2 at every block or chain INVALID
+              P==12 at every block or chain INVALID
+              Euler is the consensus mechanism
+
+    SHARE:    export chain as JSON
+              Google A100 run = exportable, verifiable, permanent
+              anyone can replay your exact simulation
+              immutable. cryptographic. honest.
+
+### The Euler Consensus Mechanism
+
+    Normal blockchain:  proof of work / proof of stake
+    GKLedger:           proof of TOPOLOGY
+
+      block is valid if and only if:
+        chi == 2
+        pentagons == 12
+        E/V == 1.500
+        hash matches
+
+      Euler is the validator.
+      1758 is the genesis block.
+      The dodecahedron is the seed.
+      You cannot forge a chi=2 mesh.
+      The math enforces consensus.
+      No mining required.
+
+### Unity VR Implementation
+
+    Assets/Kernel/
+      GKLedger.cs        -- block struct + chain + SHA256
+      GKLedgerUI.cs      -- world-space timeline scrubber in VR
+      GKLedgerExport.cs  -- JSON export
+
+    VR mechanic:
+      Left hand  = timeline scrubber (pinch + drag = seek)
+      Right hand = refine/undo
+      Scrub to step 0    -- C60 seed appears
+      Scrub to step 500k -- full turbulence
+      chi=2 badge always visible -- chain is honest
+      Every frame: cryptographically verified topology
+
+### The Real Punchline
+
+    Blockchain: immutability via cryptography
+    GKLedger:   immutability via TOPOLOGY
+
+    You cannot 51% attack Euler's theorem.
+    The dodecahedron has been the genesis block
+    since 1758.
+
+    P=12. chi=2. ALWAYS.
+    The math is the consensus.
+    The shape is the ledger.
+    The cave is the blockchain.
